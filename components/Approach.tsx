@@ -11,9 +11,9 @@ export function Approach() {
         <h1 className="heading">My <span className="text-purple">approach</span></h1>
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4">
         <Card 
-        title="Plan & Strategy" 
+        title="Design" 
         icon={<AceternityIcon order="Phase 1" />}
-        description= "I plan my Websites with Figma and Eraser.io">
+        description= "I design my Websites with Figma">
           <CanvasRevealEffect
             animationSpeed={5.1}
             containerClassName="bg-emerald-900"
