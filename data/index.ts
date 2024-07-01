@@ -205,13 +205,16 @@ export const navItems = [
     {
       id: 1,
       img: "/git.svg",
+      link: "https://github.com/Philipp3108/",
     },
     {
       id: 2,
-      img: "/twit.svg",
+      img: "/insta.svg",
+      link: "https://www.instagram.com/philippb_official/",
     },
     {
       id: 3,
-      img: "/link.svg",
+      img: "/discord.svg",
+      link: "https://discord.com/users/712318973290610689",
     },
   ];
