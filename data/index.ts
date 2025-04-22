@@ -8,7 +8,7 @@ export const navItems = [
   export const gridItems = [
     {
       id: 1,
-      title: "I prioritize client collaboration, fostering open communication",
+      title: "I'm always open to new challenges",
       description: "",
       className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
       imgClassName: "w-full h-full",
@@ -49,7 +49,7 @@ export const navItems = [
   
     {
       id: 5,
-      title: "Currently building a JS Animation library",
+      title: "Currently building a steganography program",
       description: "The Inside Scoop",
       className: "md:col-span-3 md:row-span-2",
       imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -72,11 +72,27 @@ export const navItems = [
   export const projects = [
     {
       id: 1,
-      title: "Fortnite Maps",
-      des: "My Fortnite maps are a great way to practice your skills in Fortnite",
-      img: "/p1.svg",
+      title: "Youtube Channel",
+      des: "I'm currently growing my own Youtube Channel with 1,5k+ Subscribers.",
+      img: "/youtubemockup.svg",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-      link: "",
+      link: "https://www.youtube.com/@philippb_fn",
+    },
+    {
+      id: 2,
+      title: "Tiktok Account",
+      des: "I'm also currently growing a Tiktok Account with almost 4k Followers.",
+      img: "/tiktokmockup.svg",
+      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+      link: "https://www.tiktok.com/@philippb_fn",
+    },
+    {
+      id: 3,
+      title: "GhostTag",
+      des: "I'm currently developing GhostTag — a smart tool for embedding invisible tags into images.",
+      img: "/ghosttagmockup.png",
+      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+      link: "https://github.com/Philipp3108/GhostTag",
     },
   ];
   
@@ -185,8 +201,8 @@ export const navItems = [
     },
     {
       id: 2,
-      img: "/insta.svg",
-      link: "https://www.instagram.com/philippb_official/",
+      img: "/yout.svg",
+      link: "https://www.youtube.com/@philippb_fn",
     },
     {
       id: 3,
