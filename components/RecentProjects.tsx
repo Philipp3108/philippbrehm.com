@@ -3,6 +3,7 @@ import React from 'react'
 import { div } from 'three/examples/jsm/nodes/Nodes.js'
 import { PinContainer } from './ui/3d-pin'
 import { FaLocationArrow } from 'react-icons/fa'
+import Link from 'next/link'
 
 const RecentProjects = () => {
   return (
@@ -14,26 +15,28 @@ const RecentProjects = () => {
         </h1>
         <div className='flex flex-wrap items-center justify-center p-4 gap-16 mt-10'>
             {projects.map(({id, title, des, img, iconLists, link}) => (
-                <div key={id} className='lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]'>
-                    <PinContainer title={link} href={link}>
-                        <div className='relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[20vh] mb-10'>
-                            <div className='relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]'>
-                                <img src="/bg.png" alt="bg-img" />
+                <Link href={link}>
+                    <div key={id} className='lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]'>
+                        <PinContainer title={link}>
+                            <div className='relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[20vh] mb-10'>
+                                <div className='relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]'>
+                                    <img src="/bg.png" alt="bg-img" />
+                                </div>
+                                <img src={img} alt={title} className='z-10 absolute bottom-0' />
                             </div>
-                            <img src={img} alt={title} className='z-10 absolute bottom-0' />
-                        </div>
-                        <h1 className='font-bold lg:text-xl text-base line-clamp-1'>
-                            {title}
-                        </h1>
-                        <p className='lg:font-normal font-light md:text-sm line-clamp-2'>
-                            {des}
-                        </p>
-                        <div className='flex justify-center items-center'>
-                            <p className='flex lg:text-xl md:text-xs text-sm text-purple'>Check Live Site</p>
-                            <FaLocationArrow className='ms-3' color='#CBACF9' />
-                        </div>
-                    </PinContainer>
-                </div>
+                            <h1 className='font-bold lg:text-xl text-base line-clamp-1'>
+                                {title}
+                            </h1>
+                            <p className='lg:font-normal font-light md:text-sm line-clamp-2'>
+                                {des}
+                            </p>
+                            <div className='flex justify-center items-center'>
+                                <p className='flex lg:text-xl md:text-xs text-sm text-purple'>Check Live Site</p>
+                                <FaLocationArrow className='ms-3' color='#CBACF9' />
+                            </div>
+                        </PinContainer>
+                    </div>
+                </Link>
             ))}
         </div>
     </div>
