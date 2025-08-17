@@ -73,7 +73,7 @@ export const navItems = [
     {
       id: 1,
       title: "Youtube Channel",
-      des: "I'm currently growing my own Youtube Channel with 1,5k+ Subscribers.",
+      des: "I'm currently growing my own Youtube Channel with 4k+ Subscribers.",
       img: "/youtubemockup.svg",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
       link: "https://www.youtube.com/@philippb_fn",
@@ -81,7 +81,7 @@ export const navItems = [
     {
       id: 2,
       title: "Tiktok Account",
-      des: "I'm also currently growing a Tiktok Account with almost 4k Followers.",
+      des: "I'm also currently growing a Tiktok Account with almost 6,5k Followers.",
       img: "/tiktokmockup.svg",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
       link: "https://www.tiktok.com/@philippb_fn",
