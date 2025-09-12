@@ -1,6 +1,8 @@
 import React from 'react'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
+import { socialMedia } from '@/data'
+import Link from 'next/link'
 import { MagicButton } from './ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa'
 
@@ -31,9 +33,19 @@ const Hero = () => {
                     Hi, I&apos;m Philipp, a Student living in Germany
                 </p>
 
-                <a href="#about">
+                <div className='flex mt-6'>
+                    {socialMedia.map((profile) => (
+                    <Link key={profile.id} href={profile.link} target='_blank'>
+                        <div className='w-12 h-12 mx-2 cursor-pointer flex justify-center items-center backdrop-blur-lg saturate-150 bg-opacity-75 bg-black-200 rounded-lg border border-black-300'>
+                            <profile.icon size={20}/>
+                        </div> 
+                    </Link>
+                    ))}
+                </div>
+
+                <a href="#projects">
                     <MagicButton
-                        title="Show my work " icon={<FaLocationArrow />} position={'right'}
+                        title="View my work " icon={<FaLocationArrow />} position={'right'}
                     />
                 </a>
             </div>
