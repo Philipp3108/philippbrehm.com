@@ -13,7 +13,7 @@ export function Approach() {
         <Card 
         title="Design" 
         icon={<AceternityIcon order="Phase 1" />}
-        description= "I design my Websites with Figma">
+        description= "I design my Websites with Photoshop">
           <CanvasRevealEffect
             animationSpeed={5.1}
             containerClassName="bg-emerald-900"
@@ -22,7 +22,7 @@ export function Approach() {
         <Card 
         title="Code" 
         icon={<AceternityIcon order="Phase 2" />}
-        description= "I code my Websites with VS Code">
+        description= "I code my Websites with Next.js and Python">
           <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-fuchsia-900"
