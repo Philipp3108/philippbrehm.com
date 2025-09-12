@@ -1,3 +1,5 @@
+import { FaYoutube, FaDiscord, FaGithub, FaTiktok, FaInstagram, FaEnvelope } from "react-icons/fa";
+
 export const navItems = [
     { name: "About", link: "#about" },
     { name: "Projects", link: "#projects" },
@@ -195,17 +197,27 @@ export const navItems = [
   export const socialMedia = [
     {
       id: 1,
-      img: "/git.svg",
+      icon: FaGithub,
       link: "https://github.com/Philipp3108/",
     },
     {
       id: 2,
-      img: "/yout.svg",
-      link: "https://www.youtube.com/@philippb_fn",
+      icon: FaInstagram,
+      link: "https://www.instagram.com/philipp.brehm",
     },
     {
       id: 3,
-      img: "/discord.svg",
+      icon: FaYoutube,
+      link: "https://www.youtube.com/@philippb_fn",
+    },
+    {
+      id: 4,
+      icon: FaTiktok,
+      link: "https://www.tiktok.com/@philippb_fn"
+    },
+    {
+      id: 5,
+      icon: FaDiscord,
       link: "https://discord.com/users/712318973290610689",
     },
   ];
