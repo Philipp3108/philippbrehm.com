@@ -102,6 +102,7 @@ export const navItems = [
       img: "/votelymockup.png",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
       link: "https://youtu.be/JZqKmqTKz8o",
+    }
   ];
   
   export const testimonials = [
