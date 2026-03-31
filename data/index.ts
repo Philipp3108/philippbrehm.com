@@ -95,6 +95,13 @@ export const navItems = [
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
       link: "https://github.com/Philipp3108/GhostTag",
     },
+    {
+      id: 4,
+      title: "Votely",
+      des: "Votely is an easy way for companies to get quick feedback from their customers.",
+      img: "/votelymockup.png",
+      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+      link: "https://youtu.be/JZqKmqTKz8o",
   ];
   
   export const testimonials = [
