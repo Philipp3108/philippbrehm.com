@@ -5,6 +5,11 @@ import { FaHome } from "react-icons/fa";
 import RecentProjects from "@/components/RecentProjects";
 import { Approach } from "@/components/Approach";
 import Footer from "@/components/Footer";
+import dynamic from "next/dynamic";
+
+const Globe = dynamic(() => import("@/components/ui/Globe"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
