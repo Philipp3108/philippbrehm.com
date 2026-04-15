@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import {
   motion,
@@ -9,33 +10,32 @@ import {
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 
+type NavItem = {
+  name: string;
+  link: string;
+  icon?: React.ReactNode;
+};
+
 export const FloatingNav = ({
-  navItems,
+  navItems = [],
   className,
 }: {
-  navItems: {
-    name: string;
-    link: string;
-    icon?: JSX.Element;
-  }[];
+  navItems?: NavItem[];
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(true);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
+    if (typeof current !== "number") return;
 
-      if (scrollYProgress.get() < 0.05) {
-        setVisible(true);
-      } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
-      }
+    const previous = scrollYProgress.getPrevious() ?? 0;
+    const direction = current - previous;
+
+    if (scrollYProgress.get() < 0.05) {
+      setVisible(true);
+    } else {
+      setVisible(direction < 0);
     }
   });
 
@@ -64,18 +64,16 @@ export const FloatingNav = ({
           border: "1px solid rgba(255, 255, 255, 0.125)",
         }}
       >
-        {navItems.map((navItem: any, idx: number) => (
+        {navItems.map((navItem, idx) => (
           <Link
-            key={`link=${idx}`}
+            key={`link-${idx}`}
             href={navItem.link}
             className={cn(
-              "relative dark:text-neutral-50 items-center  flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+              "relative flex items-center space-x-1 text-neutral-600 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-300"
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
-            {/* add !cursor-pointer */}
-            {/* remove hidden sm:block for the mobile responsive */}
-            <span className=" text-sm !cursor-pointer">{navItem.name}</span>
+            <span className="text-sm !cursor-pointer">{navItem.name}</span>
           </Link>
         ))}
       </motion.div>
